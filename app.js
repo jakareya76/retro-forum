@@ -23,6 +23,7 @@ const displayPosts = (posts) => {
     const postCard = document.createElement("div");
     postCard.className =
       "bg-[#F3F3F5] flex flex-col gap-10 p-8 rounded-xl md:flex-row";
+
     postCard.innerHTML = `
         <!-- Profile -->
         <div>
@@ -71,7 +72,7 @@ const displayPosts = (posts) => {
                 }</span> min</p>
               </div>
             </div>
-            <button onclick="markAsRead('${post.title}')">
+            <button onclick="markAsRead('${post.title}', '${post.view_count}')">
               <img
                 src="./images/email.png"
                 alt="email"
@@ -86,7 +87,7 @@ const displayPosts = (posts) => {
   });
 };
 
-const markAsRead = (title) => {
+const markAsRead = (title, view) => {
   const element = document.createElement("div");
   element.className =
     "flex items-center justify-between p-4 my-5 bg-white rounded-xl";
@@ -97,7 +98,7 @@ const markAsRead = (title) => {
     </h2>
     <div class="flex gap-1">
         <img src="./images/tabler-icon-eye.png" alt="eye" />
-        <span>1,568</span>
+        <span>${view}</span>
     </div>
     `;
 
