@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,5 +12,216 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body></body>
+  <body>
+    <header class="container mx-auto px-5">
+      <!-- Navbar -->
+      <nav class="flex items-center justify-between py-8">
+        <!-- Logo -->
+        <div>
+          <img src="./images/logo.png" alt="logo" />
+        </div>
+
+        <!-- Main Menu -->
+        <div class="md:flex items-center justify-center gap-5 hidden">
+          <!-- Home -->
+          <div class="bg-[#03071209] border border-[#0307121e] rounded-full">
+            <div
+              class="tooltip cursor-pointer w-12 h-12 flex items-center justify-center"
+              data-tip="Home"
+            >
+              <img src="./images/1.svg" alt="" />
+            </div>
+          </div>
+          <!-- Edit -->
+          <div class="bg-[#03071209] border border-[#0307121e] rounded-full">
+            <div
+              class="tooltip cursor-pointer w-12 h-12 flex items-center justify-center"
+              data-tip="Edit"
+            >
+              <img src="./images/2.svg" alt="" />
+            </div>
+          </div>
+          <!-- Add -->
+          <div class="bg-[#03071209] border border-[#0307121e] rounded-full">
+            <div
+              class="tooltip cursor-pointer w-12 h-12 flex items-center justify-center"
+              data-tip="Add"
+            >
+              <img src="./images/3.svg" alt="" />
+            </div>
+          </div>
+          <!-- Flag -->
+          <div class="bg-[#03071209] border border-[#0307121e] rounded-full">
+            <div
+              class="tooltip cursor-pointer w-12 h-12 flex items-center justify-center"
+              data-tip="Flag"
+            >
+              <img src="./images/4.svg" alt="" />
+            </div>
+          </div>
+
+          <button
+            class="btn rounded-full px-8 bg-[#797DFC] text-white hover:bg-[#5a5fee]"
+          >
+            Sign In
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <details class="dropdown dropdown-end block md:hidden">
+          <summary class="m-1 btn pl-5">
+            <span class="rotate-90 text-xl">|||</span>
+          </summary>
+          <ul
+            class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52"
+          >
+            <div class="grid grid-cols-2 gap-5 p-5">
+              <!-- Home -->
+              <div
+                class="bg-[#03071209] border border-[#0307121e] rounded-full"
+              >
+                <div
+                  class="tooltip cursor-pointer p-5 flex items-center justify-center"
+                  data-tip="Home"
+                >
+                  <img src="./images/1.svg" alt="" />
+                </div>
+              </div>
+              <!-- Edit -->
+              <div
+                class="bg-[#03071209] border border-[#0307121e] rounded-full"
+              >
+                <div
+                  class="tooltip cursor-pointer p-5 flex items-center justify-center"
+                  data-tip="Edit"
+                >
+                  <img src="./images/2.svg" alt="" />
+                </div>
+              </div>
+              <!-- Add -->
+              <div
+                class="bg-[#03071209] border border-[#0307121e] rounded-full"
+              >
+                <div
+                  class="tooltip cursor-pointer p-5 flex items-center justify-center"
+                  data-tip="Add"
+                >
+                  <img src="./images/3.svg" alt="" />
+                </div>
+              </div>
+              <!-- Flag -->
+              <div
+                class="bg-[#03071209] border border-[#0307121e] rounded-full"
+              >
+                <div
+                  class="tooltip cursor-pointer p-5 flex items-center justify-center"
+                  data-tip="Flag"
+                >
+                  <img src="./images/4.svg" alt="" />
+                </div>
+              </div>
+
+              <button
+                class="btn rounded-full px-8 col-span-2 bg-[#797DFC] text-white hover:bg-[#5a5fee]"
+              >
+                Sign In
+              </button>
+            </div>
+          </ul>
+        </details>
+      </nav>
+
+      <!-- Banner Area -->
+      <div
+        class="bg-[#12132D] rounded-[40px] bg-[url('./images/bgbanner.png')] bg-contain bg-no-repeat bg-bottom lg:h-[550px]"
+      >
+        <!-- Banner Inner Container -->
+        <div
+          class="flex flex-col items-center justify-around h-full p-12 gap-10 lg:flex-row"
+        >
+          <div>
+            <h2 class="lg:text-5xl text-3xl font-bold text-white leading-tight">
+              Welcome to the <br />
+              <span class="text-[#797DFC]">ReTro</span> Forum
+            </h2>
+            <p class="text-[#ecececb6] max-w-[350px] my-4">
+              Share your favorite opinion and win and wp forum coffee mug!
+            </p>
+            <div
+              class="bg-white rounded-full flex items-center justify-between"
+            >
+              <input
+                type="text"
+                placeholder="Search here anything"
+                class="border-none outline-none py-2 rounded-full px-6"
+              />
+              <button
+                class="btn bg-[#797DFC] rounded-full text-white px-6 hover:bg-[#797DFC] m-2"
+              >
+                Search
+              </button>
+            </div>
+          </div>
+          <div>
+            <div class="bg-white py-12 px-16 rounded-xl space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-[#12132dc9] font-semibold text-xl"
+                  >Registered Users</span
+                >
+                <span class="text-[#12132dc9] font-semibold text-xl ml-8"
+                  >01</span
+                >
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-[#12132dc9] font-semibold text-xl"
+                  >Forum</span
+                >
+                <span class="text-[#12132dc9] font-semibold text-xl ml-8"
+                  >05</span
+                >
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-[#12132dc9] font-semibold text-xl"
+                  >Topics</span
+                >
+                <span class="text-[#12132dc9] font-semibold text-xl ml-8"
+                  >03</span
+                >
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-[#12132dc9] font-semibold text-xl"
+                  >Replies</span
+                >
+                <span class="text-[#12132dc9] font-semibold text-xl ml-8"
+                  >08</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main></main>
+
+    <footer class="bg-[#12132d13] p-16 mt-16">
+      <div class="flex items-center justify-center flex-col gap-3 text-center">
+        <img src="./images/logo.png" alt="logo" />
+        <p class="text-[#12132d9f] max-w-[600px]">
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It
+          has roots in a piece of classical Latin literature from 45 BC
+        </p>
+
+        <!-- Icons -->
+        <div class="flex items-center justify-center gap-6 mt-4">
+          <img src="./images/logo-twitter.png" alt="icon" />
+          <img src="./images/logo-fb-simple.png" alt="icon" />
+          <img src="./images/logo-instagram.png" alt="icon" />
+          <img src="./images/logo-github.png" alt="icon" />
+        </div>
+      </div>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
 </html>
