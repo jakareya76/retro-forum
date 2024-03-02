@@ -13,7 +13,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <header class="container mx-auto px-5">
+    <header class="container px-5 mx-auto">
       <!-- Navbar -->
       <nav class="flex items-center justify-between py-12">
         <!-- Logo -->
@@ -22,11 +22,11 @@
         </div>
 
         <!-- Main Menu -->
-        <div class="md:flex items-center justify-center gap-5 hidden">
+        <div class="items-center justify-center hidden gap-5 md:flex">
           <!-- Home -->
           <div class="bg-[#03071209] border border-[#0307121e] rounded-full">
             <div
-              class="tooltip cursor-pointer w-12 h-12 flex items-center justify-center"
+              class="flex items-center justify-center w-12 h-12 cursor-pointer tooltip"
               data-tip="Home"
             >
               <img src="./images/1.svg" alt="" />
@@ -35,7 +35,7 @@
           <!-- Edit -->
           <div class="bg-[#03071209] border border-[#0307121e] rounded-full">
             <div
-              class="tooltip cursor-pointer w-12 h-12 flex items-center justify-center"
+              class="flex items-center justify-center w-12 h-12 cursor-pointer tooltip"
               data-tip="Edit"
             >
               <img src="./images/2.svg" alt="" />
@@ -44,7 +44,7 @@
           <!-- Add -->
           <div class="bg-[#03071209] border border-[#0307121e] rounded-full">
             <div
-              class="tooltip cursor-pointer w-12 h-12 flex items-center justify-center"
+              class="flex items-center justify-center w-12 h-12 cursor-pointer tooltip"
               data-tip="Add"
             >
               <img src="./images/3.svg" alt="" />
@@ -53,7 +53,7 @@
           <!-- Flag -->
           <div class="bg-[#03071209] border border-[#0307121e] rounded-full">
             <div
-              class="tooltip cursor-pointer w-12 h-12 flex items-center justify-center"
+              class="flex items-center justify-center w-12 h-12 cursor-pointer tooltip"
               data-tip="Flag"
             >
               <img src="./images/4.svg" alt="" />
@@ -68,9 +68,9 @@
         </div>
 
         <!-- Mobile Menu -->
-        <details class="dropdown dropdown-end block md:hidden">
-          <summary class="m-1 btn pl-5">
-            <span class="rotate-90 text-xl">|||</span>
+        <details class="block dropdown dropdown-end md:hidden">
+          <summary class="pl-5 m-1 btn">
+            <span class="text-xl rotate-90">|||</span>
           </summary>
           <ul
             class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52"
@@ -81,7 +81,7 @@
                 class="bg-[#03071209] border border-[#0307121e] rounded-full"
               >
                 <div
-                  class="tooltip cursor-pointer p-5 flex items-center justify-center"
+                  class="flex items-center justify-center p-5 cursor-pointer tooltip"
                   data-tip="Home"
                 >
                   <img src="./images/1.svg" alt="" />
@@ -92,7 +92,7 @@
                 class="bg-[#03071209] border border-[#0307121e] rounded-full"
               >
                 <div
-                  class="tooltip cursor-pointer p-5 flex items-center justify-center"
+                  class="flex items-center justify-center p-5 cursor-pointer tooltip"
                   data-tip="Edit"
                 >
                   <img src="./images/2.svg" alt="" />
@@ -103,7 +103,7 @@
                 class="bg-[#03071209] border border-[#0307121e] rounded-full"
               >
                 <div
-                  class="tooltip cursor-pointer p-5 flex items-center justify-center"
+                  class="flex items-center justify-center p-5 cursor-pointer tooltip"
                   data-tip="Add"
                 >
                   <img src="./images/3.svg" alt="" />
@@ -114,7 +114,7 @@
                 class="bg-[#03071209] border border-[#0307121e] rounded-full"
               >
                 <div
-                  class="tooltip cursor-pointer p-5 flex items-center justify-center"
+                  class="flex items-center justify-center p-5 cursor-pointer tooltip"
                   data-tip="Flag"
                 >
                   <img src="./images/4.svg" alt="" />
@@ -137,10 +137,10 @@
       >
         <!-- Banner Inner Container -->
         <div
-          class="flex flex-col items-center justify-around h-full p-12 gap-10 lg:flex-row"
+          class="flex flex-col items-center justify-around h-full gap-10 p-12 lg:flex-row"
         >
           <div>
-            <h2 class="lg:text-5xl text-3xl font-bold text-white leading-tight">
+            <h2 class="text-3xl font-bold leading-tight text-white lg:text-5xl">
               Welcome to the <br />
               <span class="text-[#797DFC]">ReTro</span> Forum
             </h2>
@@ -148,12 +148,12 @@
               Share your favorite opinion and win and wp forum coffee mug!
             </p>
             <div
-              class="bg-white rounded-full flex items-center justify-between"
+              class="flex items-center justify-between bg-white rounded-full"
             >
               <input
                 type="text"
                 placeholder="Search here anything"
-                class="border-none outline-none py-2 rounded-full px-6"
+                class="px-6 py-2 border-none rounded-full outline-none"
               />
               <button
                 class="btn bg-[#797DFC] rounded-full text-white px-6 hover:bg-[#797DFC] m-2"
@@ -163,7 +163,7 @@
             </div>
           </div>
           <div>
-            <div class="bg-white py-12 px-16 rounded-xl space-y-4">
+            <div class="px-16 py-12 space-y-4 bg-white rounded-xl">
               <div class="flex items-center justify-between">
                 <span class="text-[#12132dc9] font-semibold text-xl"
                   >Registered Users</span
@@ -202,12 +202,110 @@
       </div>
     </header>
 
-    <main class="container mx-auto px-5">
+    <main class="container px-5 mx-auto">
       <!-- Discuss Area -->
-      <div></div>
+      <section class="py-20">
+        <div class="text-center">
+          <h2 class="text-5xl font-bold">Let’s Discuss</h2>
+          <p class="max-w-[650px] mx-auto my-4 text-gray-500">
+            Yes, you can run unit tests and view the results directly within the
+            app. The integrated testing features allow for a streamlined .
+          </p>
+        </div>
+
+        <!-- Discuss Container -->
+        <div class="flex flex-col justify-center gap-8 mt-8 lg:flex-row">
+          <!-- Right Container -->
+          <div class="w-full lg:w-[64%]">
+            <div class="grid gap-5">
+              <!-- Discuss -->
+              <div class="bg-[#F3F3F5] flex gap-10 p-8 rounded-xl">
+                <!-- Profile -->
+                <div>
+                  <div class="avatar online">
+                    <div class="w-24 h-24 rounded-full">
+                      <img
+                        src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Text Area -->
+                <div class="w-full">
+                  <!-- Top Area -->
+                  <div class="flex gap-5">
+                    <p class="text-[#12132de0] font-semibold"># Music</p>
+                    <p class="text-[#12132de0] font-semibold">
+                      Author : Awlad Hossain
+                    </p>
+                  </div>
+                  <h2 class="text-2xl text-[#12132D] font-semibold my-3">
+                    10 Kids Unaware of Their Halloween Costume
+                  </h2>
+                  <p class="max-w-[550px] text-[#12132da1]">
+                    It’s one thing to subject yourself to ha Halloween costume
+                    mishap because, hey that’s your prerogative
+                  </p>
+
+                  <div class="w-full pb-5 border-b border-dashed"></div>
+
+                  <!-- Bottom Area -->
+                  <div class="flex items-center justify-between mt-5">
+                    <div class="flex gap-8">
+                      <div class="flex items-center gap-2">
+                        <img src="./images/icon-2.png" alt="icon" />
+                        <p class="text-xl text-gray-500">560</p>
+                      </div>
+                      <div class="flex items-center gap-2">
+                        <img src="./images/tabler-icon-eye.png" alt="icon" />
+                        <p class="text-xl text-gray-500">1,568</p>
+                      </div>
+                      <div class="flex items-center gap-2">
+                        <img src="./images/icon.png" alt="icon" />
+                        <p class="text-xl text-gray-500"><span>5</span> min</p>
+                      </div>
+                    </div>
+                    <button>
+                      <img
+                        src="./images/email.png"
+                        alt="email"
+                        class="object-cover w-10"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Left Container -->
+          <div class="w-full p-5 bg-base-200 rounded-xl lg:w-[35%]">
+            <div class="flex items-center justify-between">
+              <h4 class="text-xl font-bold">Title</h4>
+              <p class="text-[#12132da9]">Mark as read (<span>4</span>)</p>
+            </div>
+
+            <div class="my-4">
+              <!-- Title -->
+              <div
+                class="flex items-center justify-between p-4 my-5 bg-white rounded-xl"
+              >
+                <h2 class="font-semibold">
+                  10 Kids Unaware of Their Halloween Costume
+                </h2>
+                <div class="flex gap-1">
+                  <img src="./images/tabler-icon-eye.png" alt="eye" />
+                  <span>1,568</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Forum Area -->
-      <div
+      <section
         class="bg-[#12132D] md:px-16 px-8 py-12 my-16 rounded-3xl flex items-center justify-between flex-col gap-16 md:gap-0 md:flex-row"
       >
         <div>
@@ -225,15 +323,15 @@
         <div>
           <img src="./images/joinforum.png" alt="joinforum" />
         </div>
-      </div>
+      </section>
 
       <!-- Latest Posts Area -->
-      <div></div>
+      <section></section>
     </main>
 
     <footer class="bg-[#12132d13] p-16 mt-16">
       <div
-        class="flex items-center justify-center flex-col gap-3 text-center pb-12 border-b-2"
+        class="flex flex-col items-center justify-center gap-3 pb-12 text-center border-b-2"
       >
         <img src="./images/logo.png" alt="logo" />
         <p class="text-[#12132d9f] max-w-[600px]">
@@ -250,7 +348,7 @@
         </div>
       </div>
 
-      <div class="text-center pt-12">
+      <div class="pt-12 text-center">
         <span class="text-lg text-gray-600">2017, All Rights Reserved.</span>
       </div>
     </footer>
