@@ -1,5 +1,9 @@
 const discussContainer = document.getElementById("discuss-container");
 const titleContainer = document.getElementById("title-container");
+const markCount = document.getElementById("mark-count");
+
+let mark = 0;
+markCount.innerHTML = mark;
 
 const loadPosts = async () => {
   const res = await fetch(
@@ -94,6 +98,9 @@ const markAsRead = (title) => {
         <span>1,568</span>
     </div>
     `;
+
+  mark++;
+  markCount.innerHTML = mark;
 
   titleContainer.appendChild(element);
 };
