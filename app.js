@@ -2,6 +2,7 @@ const discussContainer = document.getElementById("discuss-container");
 const titleContainer = document.getElementById("title-container");
 const markCount = document.getElementById("mark-count");
 const latestPostContainer = document.getElementById("latest-post-container");
+const searchField = document.getElementById("search-field");
 
 let mark = 0;
 markCount.innerHTML = mark;
@@ -157,6 +158,39 @@ const loadLatestPost = async () => {
 
     latestPostContainer.appendChild(postCard);
   });
+};
+
+const handleSearch = async () => {
+  const searchText = searchField.value;
+
+  const url = `https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchText}`;
+
+  const res = await fetch(url);
+  const data = await res.json();
+
+  const posts = data.posts;
+
+  // Display loading spinner
+  discussContainer.innerHTML = `
+    <div class="flex items-center justify-center w-full py-10">
+     <span class="loading loading-bars loading-lg text-error"></span>
+    </div>
+  `;
+
+  // Delay for 2 seconds using setTimeout
+  await new Promise((resolve) => setTimeout(resolve, 1500));
+
+  discussContainer.innerHTML = "";
+
+  if (posts.length === 0) {
+    discussContainer.innerHTML = `
+    <div class="w-full flex items-center justify-center">
+      <h2 class="text-4xl font-bold text-red-500 mt-8">${data.message}</h2>
+    </div>
+    `;
+  }
+
+  displayPosts(posts);
 };
 
 loadLatestPost();
