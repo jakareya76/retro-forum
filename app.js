@@ -178,7 +178,7 @@ const handleSearch = async () => {
   `;
 
   // Delay for 2 seconds using setTimeout
-  await new Promise((resolve) => setTimeout(resolve, 1500));
+  await new Promise((resolve) => setTimeout(resolve, 2000));
 
   discussContainer.innerHTML = "";
 
