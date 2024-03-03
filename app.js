@@ -73,13 +73,16 @@ const displayPosts = (posts) => {
                 }</span> min</p>
               </div>
             </div>
-            <button onclick="markAsRead('${post.title}', '${post.view_count}')">
-              <img
+            <button onclick="markAsRead(this)" data-title="${
+              post.title
+            }" data-viewcount="${post.view_count}">
+            <img 
                 src="./images/email.png"
                 alt="email"
                 class="object-cover w-10"
-              />
-            </button>
+            />
+        </button>
+        
           </div>
         </div>
         `;
@@ -88,20 +91,23 @@ const displayPosts = (posts) => {
   });
 };
 
-const markAsRead = (title, view) => {
+const markAsRead = (button) => {
+  const title = button.getAttribute("data-title");
+  const viewCount = button.getAttribute("data-viewcount");
+
   const element = document.createElement("div");
   element.className =
     "flex items-center justify-between p-4 my-5 bg-white rounded-xl";
 
   element.innerHTML = `
-    <h2 class="font-semibold">
-        ${title}
-    </h2>
-    <div class="flex gap-1">
-        <img src="./images/tabler-icon-eye.png" alt="eye" />
-        <span>${view}</span>
-    </div>
-    `;
+      <h2 class="font-semibold">
+          ${title}
+      </h2>
+      <div class="flex gap-1">
+          <img src="./images/tabler-icon-eye.png" alt="eye" />
+          <span>${viewCount}</span>
+      </div>
+  `;
 
   mark++;
   markCount.innerHTML = mark;
